@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="الرواد اليكتريك لتصنيع وتجميع وتطوير اللوحات الكهربائية بمختلف أنواعها وقدراتها.">
+  <meta name="theme-color" content="#111317">
+  <title>الرواد اليكتريك | تصنيع اللوحات الكهربائية</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700&display=swap');
+    :root{--red:#d71925;--ink:#101114;--muted:#69707b;--light:#f5f6f8;--line:#e8e9ed}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}
+    body{margin:0;font-family:'Cairo',Tahoma,sans-serif;color:var(--ink);background:#fff}
+    a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+    .topbar{background:#101114;color:#fff;font-size:13px;padding:9px 0}
+    .topbar .container{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand img{width:235px;max-height:70px;object-fit:contain;display:block}
+    .links{display:flex;gap:24px;align-items:center;font-weight:700;font-size:14px}
+    .links a:hover{color:var(--red)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:8px;background:var(--red);color:white;font-weight:800;transition:.2s;border:1px solid var(--red)}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px #d7192530}
+    .btn.outline{background:transparent;color:white;border-color:#ffffff80}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#101114 0%,#191c22 55%,#30343b 100%);color:#fff;padding:90px 0 100px}
+    .hero:before{content:"";position:absolute;width:480px;height:480px;border:1px solid #ffffff12;border-radius:50%;left:-100px;top:-180px;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff05}
+    .hero:after{content:"";position:absolute;width:6px;height:210px;background:var(--red);right:0;top:22%}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:50px;position:relative;z-index:1}
+    .eyebrow{color:#ff6b73;font-weight:800;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+    .eyebrow:before{content:"";width:32px;height:2px;background:var(--red)}
+    h1{font-size:clamp(34px,5vw,60px);line-height:1.35;margin:0 0 20px;font-weight:900}
+    h1 span{color:#ff3945}.hero p{font-size:18px;line-height:2;color:#c9cbd0;max-width:650px;margin:0 0 28px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-mark{border:1px solid #ffffff22;background:#ffffff0a;border-radius:22px;padding:15px;box-shadow:0 25px 60px #0005;transform:rotate(-2deg)}
+    .hero-mark img{width:100%;height:390px;object-fit:cover;display:block;border-radius:12px}
+    .hero-caption{display:flex;justify-content:space-between;color:#d8d9dc;font-size:12px;margin-top:14px}
+    .stats{background:#fff;position:relative;margin-top:-34px;z-index:3}
+    .stats-grid{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-radius:14px;box-shadow:0 12px 45px #10111412;border:1px solid var(--line);padding:24px}
+    .stat{text-align:center;padding:5px 12px;border-left:1px solid var(--line)}.stat:last-child{border:0}
+    .stat strong{display:block;font-size:18px}.stat span{color:var(--muted);font-size:13px}
+    section{padding:86px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+    .kicker{color:var(--red);font-weight:900;font-size:13px}
+    h2{font-size:clamp(27px,3vw,39px);margin:8px 0 12px;font-weight:900}
+    .section-head p{color:var(--muted);line-height:1.9;margin:0}
+    .services{background:var(--light)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;padding:28px;border:1px solid var(--line);border-radius:14px;transition:.25s}
+    .card:hover{transform:translateY(-6px);box-shadow:0 18px 38px #1111110d;border-color:#f2b5b9}
+    .icon{width:52px;height:52px;border-radius:12px;background:#fff0f1;color:var(--red);display:grid;place-items:center;font-size:25px;margin-bottom:18px}
+    .card h3{font-size:19px;margin:0 0 9px}.card p{color:var(--muted);line-height:1.9;margin:0;font-size:14px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .about-copy p{color:var(--muted);line-height:2;font-size:16px}
+    .checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+    .check{background:#fff7f7;padding:12px;border-radius:9px;font-weight:700;font-size:14px}.check b{color:var(--red);margin-left:7px}
+    .about-photo{width:100%;height:440px;object-fit:cover;border-radius:16px;box-shadow:0 18px 45px #10111420}
+    .gallery{background:#111317;color:white}.gallery .section-head p{color:#b9bdc5}
+    .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .gallery figure{margin:0;border-radius:15px;overflow:hidden;background:#202329;border:1px solid #ffffff18}
+    .gallery img{width:100%;height:390px;object-fit:cover;display:block;transition:.4s}
+    .gallery figure:hover img{transform:scale(1.035)}.gallery figcaption{padding:16px 20px;font-weight:700}
+    .contact{background:var(--light)}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px}
+    .contact-panel{background:#111317;color:#fff;border-radius:16px;padding:32px}
+    .contact-panel p{color:#c4c6cc;line-height:1.9}
+    .contact-line{padding:15px 0;border-bottom:1px solid #ffffff1c;display:flex;gap:12px;align-items:center}
+    .contact-line:last-child{border:0}.contact-line span{color:#ff6b73;font-size:20px}
+    .contact-note{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px}
+    .contact-note h3{font-size:24px;margin:0 0 12px}.contact-note p{color:var(--muted);line-height:2}
+    footer{background:#0b0c0f;color:#b8bbc2;padding:25px 0;font-size:13px}
+    footer .container{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .mobile-cta{display:none}
+    @media(max-width:800px){.links{display:none}.nav{min-height:72px}.brand img{width:195px}.hero{padding:65px 0 75px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-mark{max-width:470px;margin:auto}.cards{grid-template-columns:1fr 1fr}.gallery img{height:280px}}
+    @media(max-width:540px){.topbar .container{justify-content:center;text-align:center}.hero p{font-size:16px}.stats-grid{padding:16px 8px}.stat strong{font-size:14px}.stat span{font-size:11px}section{padding:65px 0}.cards,.gallery-grid{grid-template-columns:1fr}.gallery img{height:270px}.checks{grid-template-columns:1fr}.contact-panel,.contact-note{padding:24px}.actions .btn{width:100%}.hero-mark img{height:290px}.mobile-cta{display:flex;position:fixed;bottom:12px;left:12px;right:12px;z-index:30;justify-content:center;box-shadow:0 8px 30px #0004}footer{padding-bottom:82px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="container"><span>الرواد اليكتريك — خبرة في تصنيع وتجميع اللوحات الكهربائية</span><span>📞 01211402960 &nbsp; | &nbsp; 01020876167</span></div></div>
+  <header><div class="container nav">
+    <a class="brand" href="#home" aria-label="الرواد اليكتريك"><img src="assets/logo.jpg" alt="شعار الرواد اليكتريك"></a>
+    <nav class="links" aria-label="القائمة الرئيسية">
+      <a href="#home">الرئيسية</a><a href="#services">خدماتنا</a><a href="#about">من نحن</a><a href="#gallery">أعمالنا</a><a href="#contact">اتصل بنا</a>
+    </nav>
+    <a class="btn" href="tel:01211402960">تواصل معنا</a>
+  </div></header>
+
+  <main>
+    <section class="hero" id="home"><div class="container hero-grid">
+      <div>
+        <div class="eyebrow">ALROWAD ELECTRIC</div>
+        <h1>حلول كهربائية متكاملة<br><span>بجودة يمكنك الاعتماد عليها</span></h1>
+        <p>الرواد اليكتريك لتصنيع وتجميع وتطوير اللوحات الكهربائية بمختلف أنواعها وقدراتها، مع الاهتمام بجودة التنفيذ ودقة التفاصيل.</p>
+        <div class="actions"><a class="btn" href="#contact">اطلب استفسارك الآن</a><a class="btn outline" href="#services">اكتشف خدماتنا</a></div>
+      </div>
+      <div class="hero-mark"><img src="assets/electrical-panel.jpg" alt="فني يعمل على لوحة كهربائية"><div class="hero-caption"><span>تصنيع وتجميع اللوحات الكهربائية</span><span>ALROWAD ELECTRIC</span></div></div>
+    </div></section>
+
+    <div class="stats"><div class="container stats-grid">
+      <div class="stat"><strong>تصنيع وتجميع</strong><span>للوحات الكهربائية</span></div>
+      <div class="stat"><strong>مختلف الأنواع</strong><span>والقدرات</span></div>
+      <div class="stat"><strong>حلول متكاملة</strong><span>حسب احتياجات المشروع</span></div>
+    </div></div>
+
+    <section class="services" id="services"><div class="container">
+      <div class="section-head"><div class="kicker">خدماتنا</div><h2>خدمات كهربائية بمستوى احترافي</h2><p>نقدم خدمات تصنيع وتجميع وتطوير اللوحات الكهربائية لتلبية متطلبات المشروعات المختلفة.</p></div>
+      <div class="cards">
+        <article class="card"><div class="icon">⚡</div><h3>تصنيع اللوحات الكهربائية</h3><p>تصنيع لوحات كهربائية بمختلف الأنواع والقدرات وفق متطلبات كل مشروع.</p></article>
+        <article class="card"><div class="icon">▦</div><h3>تجميع اللوحات</h3><p>تجميع مكونات اللوحات وترتيبها بعناية مع الاهتمام بالتوصيلات والتنظيم الداخلي.</p></article>
+        <article class="card"><div class="icon">⚙</div><h3>تطوير وتحديث اللوحات</h3><p>تطوير اللوحات القائمة وتحديثها بما يتناسب مع احتياجات التشغيل.</p></article>
+      </div>
+    </div></section>
+
+    <section id="about"><div class="container about-grid">
+      <div class="about-copy"><div class="kicker">من نحن</div><h2>الرواد اليكتريك</h2>
+        <p>شركة متخصصة في تصنيع وتجميع وتطوير اللوحات الكهربائية بمختلف أنواعها وقدراتها. نركز على تقديم أعمال منظمة وحلول مناسبة لاحتياجات العملاء والمشروعات.</p>
+        <div class="checks"><div class="check"><b>✓</b> اهتمام بجودة التنفيذ</div><div class="check"><b>✓</b> تنوع في اللوحات</div><div class="check"><b>✓</b> تنظيم ودقة في العمل</div><div class="check"><b>✓</b> تواصل مباشر</div></div>
+      </div>
+      <img class="about-photo" src="assets/workshop-operator.jpg" alt="أحد الفنيين أثناء العمل داخل الورشة">
+    </div></section>
+
+    <section class="gallery" id="gallery"><div class="container">
+      <div class="section-head"><div class="kicker">من أعمالنا</div><h2>لقطات من بيئة العمل</h2><p>صور من أعمال التشغيل والتعامل مع اللوحات والمعدات الكهربائية.</p></div>
+      <div class="gallery-grid">
+        <figure><img src="assets/workshop-operator.jpg" alt="فني يتابع العمل على ماكينة"><figcaption>متابعة التشغيل والعمل بالمعدات</figcaption></figure>
+        <figure><img src="assets/electrical-panel.jpg" alt="لوحة كهربائية ومكوناتها الداخلية"><figcaption>تجميع وتنظيم مكونات اللوحات الكهربائية</figcaption></figure>
+      </div>
+    </div></section>
+
+    <section class="contact" id="contact"><div class="container">
+      <div class="section-head"><div class="kicker">تواصل معنا</div><h2>يسعدنا استقبال استفساراتكم</h2><p>تواصل مع فريق الرواد اليكتريك للاستفسار عن خدمات تصنيع وتجميع وتطوير اللوحات الكهربائية.</p></div>
+      <div class="contact-grid">
+        <div class="contact-panel"><h3>بيانات التواصل</h3><p>نحن جاهزون للتواصل والرد على استفساراتكم.</p>
+          <a class="contact-line" href="tel:01211402960"><span>☎</span><div><small>الهاتف الأول</small><br><strong>01211402960</strong></div></a>
+          <a class="contact-line" href="tel:01020876167"><span>☎</span><div><small>الهاتف الثاني</small><br><strong>01020876167</strong></div></a>
+          <a class="contact-line" href="mailto:alroudelectric@gmail.com"><span>✉</span><div><small>البريد الإلكتروني</small><br><strong>alroudelectric@gmail.com</strong></div></a>
+        </div>
+        <div class="contact-note"><h3>الرواد اليكتريك — ALROWAD ELECTRIC</h3>
+          <p>لتصنيع وتجميع وتطوير اللوحات الكهربائية بمختلف أنواعها وقدراتها.</p>
+          <a class="btn" href="https://wa.me/201211402960" target="_blank" rel="noopener">تواصل عبر واتساب</a>
+        </div>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container"><span>© <span id="year"></span> الرواد اليكتريك — جميع الحقوق محفوظة</span><span>ALROWAD ELECTRIC</span></div></footer>
+  <a class="btn mobile-cta" href="tel:01211402960">اتصل بالرواد اليكتريك</a>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
